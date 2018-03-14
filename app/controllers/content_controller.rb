@@ -1,7 +1,8 @@
 class ContentController < ApplicationController
 
   def home
-    # @gdir = Google::Directions
+
+    @gdir = Directions.config
   end
 
 end
