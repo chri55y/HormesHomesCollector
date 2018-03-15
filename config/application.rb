@@ -21,9 +21,15 @@ module HormesHomesCollector
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    # from http://guides.rubyonrails.org/generators.html
+    config.generators do |g|
+      # g.orm             :active_record # standard, rarely change
+      # g.template_engine :erb	# could be slim, haml
+      # g.test_framework  :test_unit, fixture: false
+      # g.stylesheets     false
+      # g.javascripts     false
+      g.scaffold_stylesheet false
+    end
 
     # Don't generate system test files.
     config.generators.system_tests = nil
