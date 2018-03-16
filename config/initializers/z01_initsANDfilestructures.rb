@@ -55,7 +55,7 @@ GoogleDirections.config.private_key=Rails.configuration.google[:api_key]
 # solution: use .config.private_key, not class method ::Config.private_key
 
 
-puts "\t> testing request\t> initilize"
+puts "\t> testing request\t> initialize"
 req = GoogleDirections::Request.new
 # ERROR => /Users/Chrissy/develop/realestate/HormesHomesCollector/config/initializers/z01_initsANDfilestructures.rb:54:in `<top (required)>': uninitialized constant GoogleDirections::Request (NameError)
 # failed solutions:
