@@ -1,4 +1,4 @@
-puts "   start file #{File.basename(__FILE__)}"
+puts "=> start file #{File.basename(__FILE__)}"
 
 # autoload(GoogleDirections, '../../lib/customAddIns/google_directions.rb')
 #
@@ -56,6 +56,9 @@ req = GoogleDirections::Request.new
 # failed solutions:
 #     > .new() instead of .new
 #     > Request.new (removing GoogleDirections::)
+# solution
+#     + fix :Request file path (copied from config without changing file)
+#     + add patron gem
 
 
 puts "\n   end file #{File.basename(__FILE__)}\n"
