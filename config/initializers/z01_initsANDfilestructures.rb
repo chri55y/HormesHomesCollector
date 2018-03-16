@@ -27,7 +27,7 @@ module GoogleDirections
   autoload :Config  , File.expand_path("../../lib/customAddIns/google_directions/config", __dir__)
   autoload :Error   , '../../lib/customAddIns/google_directions/error'
   autoload :Encoder , '../../lib/customAddIns/google_directions/encoder'
-  autoload :Request , File.expand_path("../../lib/customAddIns/google_directions/config", __dir__)
+  autoload :Request , File.expand_path("../../lib/customAddIns/google_directions/request", __dir__)
                       #'../../lib/customAddIns/google_directions/request'
   autoload :Version , '../../lib/customAddIns/google_directions/version'
 
@@ -53,7 +53,9 @@ GoogleDirections.config.private_key=Rails.configuration.google[:api_key]
 puts "\t> testing request"
 req = GoogleDirections::Request.new
 # ERROR => /Users/Chrissy/develop/realestate/HormesHomesCollector/config/initializers/z01_initsANDfilestructures.rb:54:in `<top (required)>': uninitialized constant GoogleDirections::Request (NameError)
-
+# failed solutions:
+#     > .new() instead of .new
+#     > Request.new (removing GoogleDirections::)
 
 
 puts "\n   end file #{File.basename(__FILE__)}\n"
