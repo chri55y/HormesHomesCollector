@@ -1,4 +1,4 @@
-puts "/n  start file #{File.basename(__FILE__)}"
+puts "   start file #{File.basename(__FILE__)}"
 
 # autoload(GoogleDirections, '../../lib/customAddIns/google_directions.rb')
 #
@@ -30,4 +30,12 @@ module GoogleDirections
 
 end
 
+Rails.configuration.google = {:api_key => ENV['GOOGLE_MAPS_API_KEY']}
+
+# puts "\tRails.configuration.google assigned :api_key => #{Rails.configuration.google[:api_key]}"
+
+# GoogleDirections::Config.private_key=ENV[]
+
+
+puts "\n   end file #{File.basename(__FILE__)}\n"
 
