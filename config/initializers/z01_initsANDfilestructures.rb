@@ -27,7 +27,8 @@ module GoogleDirections
   autoload :Config  , File.expand_path("../../lib/customAddIns/google_directions/config", __dir__)
   autoload :Error   , '../../lib/customAddIns/google_directions/error'
   autoload :Encoder , '../../lib/customAddIns/google_directions/encoder'
-  autoload :Request , '../../lib/customAddIns/google_directions/request'
+  autoload :Request , File.expand_path("../../lib/customAddIns/google_directions/config", __dir__)
+                      #'../../lib/customAddIns/google_directions/request'
   autoload :Version , '../../lib/customAddIns/google_directions/version'
 
 end
@@ -37,7 +38,8 @@ Rails.configuration.google = {:api_key => ENV['GOOGLE_MAPS_API_KEY']}
 # puts "\tRails.configuration.google assigned :api_key => #{Rails.configuration.google[:api_key]}"
 
 
-puts "\taccess files in #{File.expand_path("../../lib/customAddIns/google_directions/config", __dir__)}"
+# puts "\taccessing files in #{File.expand_path("../../lib/customAddIns/google_directions/config", __dir__)}"
+puts "\t> setting private key"
 # GoogleDirections::Config.private_key=Rails.configuration.google[:api_key]
 # ERROR => /Users/Chrissy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.5/lib/active_support/dependencies.rb:292:in `require': cannot load such file -- ../../lib/customAddIns/google_directions/config (LoadError)
 # failed solutions:
@@ -48,8 +50,9 @@ GoogleDirections.config.private_key=Rails.configuration.google[:api_key]
 # solution: use .config.private_key, not class method ::Config.private_key
 
 
-puts ""
+puts "\t> testing request"
 req = GoogleDirections::Request.new
+# ERROR => /Users/Chrissy/develop/realestate/HormesHomesCollector/config/initializers/z01_initsANDfilestructures.rb:54:in `<top (required)>': uninitialized constant GoogleDirections::Request (NameError)
 
 
 
