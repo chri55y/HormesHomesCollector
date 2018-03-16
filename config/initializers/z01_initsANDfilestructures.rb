@@ -1,11 +1,9 @@
 puts "=> start file #{File.basename(__FILE__)}"
 
-# autoload(GoogleDirections, '../../lib/customAddIns/google_directions.rb')
-#
 
-# r = Request.new
-
-
+# google_directions.rb contents
+# remove to try to use earlier file structure
+=begin
 # $:.unshift File.expand_path('../lib/', __dir__)
 
 
@@ -32,6 +30,13 @@ module GoogleDirections
   autoload :Version , '../../lib/customAddIns/google_directions/version'
 
 end
+=end
+
+puts "\t> accessing google_directions.rb"
+# access google_directions.rb
+# autoload GoogleDirections, File.expand_path('../../lib/customAddIns/google_directions.rb',__dir__)
+autoload :GoogleDirections, File.expand_path('../../lib/customAddIns/google_directions.rb',__dir__)
+# needed : prefix for namespacing
 
 Rails.configuration.google = {:api_key => ENV['GOOGLE_MAPS_API_KEY']}
 
