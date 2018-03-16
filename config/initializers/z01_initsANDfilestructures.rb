@@ -34,7 +34,12 @@ Rails.configuration.google = {:api_key => ENV['GOOGLE_MAPS_API_KEY']}
 
 # puts "\tRails.configuration.google assigned :api_key => #{Rails.configuration.google[:api_key]}"
 
-# GoogleDirections::Config.private_key=ENV[]
+GoogleDirections::Config.private_key=Rails.configuration.google[:api_key]
+# ERROR => /Users/Chrissy/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.5/lib/active_support/dependencies.rb:292:in `require': cannot load such file -- ../../lib/customAddIns/google_directions/config (LoadError)
+
+
+req = GoogleDirections::Request.new
+
 
 
 puts "\n   end file #{File.basename(__FILE__)}\n"
