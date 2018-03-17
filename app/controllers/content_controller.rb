@@ -2,13 +2,13 @@ class ContentController < ApplicationController
 
   def home
 
-    autoload :GoogleDirections, File.expand_path('../../lib/customAddIns/google_directions.rb',__dir__)
+    # autoload :GoogleDirections, File.expand_path('../../lib/customAddIns/google_directions.rb',__dir__)
 
-    @req = GoogleDirections::Request.new
-    @test_params = { :origin      => "Disneyland" ,
-                    :destination => "Universal Studios Hollywood"
+    req = GoogleDirections::Request.new
+    @test_params = { :origin      => "DFW" ,
+                    :destination => "DAL"
     }
-    @response = @req.get(@test_params)
+    @response = req.get(@test_params)
     # puts @response.inspect
 
   end
