@@ -70,7 +70,9 @@ test_params = { :origin      => "Disneyland" ,
                 :destination => "Universal Studios Hollywood"
               }
 response = req.get(test_params)
-puts response.inspect
+# puts response.inspect
+# puts response["routes"]["legs"].first["duration"]["text"].inspect
+puts "\t\t\t\t> response status: #{response["status"]}"
 
 puts "\n   end file #{File.basename(__FILE__)}\n"
 
