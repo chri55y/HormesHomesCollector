@@ -8,6 +8,7 @@ end
 
 puts "\t> make test API call"
 test_property = Rubillow::HomeValuation.zestimate({ :zpid => '48749425' })
+# puts ENV['ZWSID']
 if test_property.success?
   puts "\t\tSuccess! price is $#{test_property.price}"
 else
