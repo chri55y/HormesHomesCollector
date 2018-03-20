@@ -58,3 +58,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # added 3/16/18 for google directions
 gem 'patron'
+
+# added 3/19/18
+# https://github.com/synewaves/rubillow
+gem 'rubillow'
