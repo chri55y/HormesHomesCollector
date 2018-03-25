@@ -13,6 +13,9 @@ class ContentController < ApplicationController
 
   end
 
+  def scrape
+
+  end
 
 
 end
