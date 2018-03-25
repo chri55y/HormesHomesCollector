@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :property_notes
-  resources :properties
+
+  resources :properties ,
+            :property_notes
 
   root to: 'content#home'
 
