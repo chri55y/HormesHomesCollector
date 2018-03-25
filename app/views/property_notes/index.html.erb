@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Property Notes</h2>
+
+<hr>
+
+
+<div>
+  <% @property_notes.each do |property_note| %>
+    <div>
+      <p><%= property_note.property_id %></p>
+      <p><%= property_note.note %></p>
+      <p><%= link_to 'Show', property_note %></p>
+      <p><%= link_to 'Edit', edit_property_note_path(property_note) %></p>
+      <p><%= link_to 'Remove', property_note, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'Create a New Property Note', new_property_note_path %>
+

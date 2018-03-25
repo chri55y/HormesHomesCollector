@@ -1,0 +1,2 @@
+class PropertyNote < ApplicationRecord
+end
