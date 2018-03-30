@@ -2,5 +2,9 @@
 
 <hr/>
 
-<%= @response.inspect %>
-
+<!--<pre>-->
+<% #= @response.inspect %>
+<!--</pre>-->
+<pre>
+<%= JSON.pretty_generate(@response) %>
+</pre>
